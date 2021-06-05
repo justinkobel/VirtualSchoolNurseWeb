@@ -40,33 +40,9 @@ function extractLocale(localeParam) {
     }
 }
 
-function chatRequested() {
-    const params = new URLSearchParams(location.search);
-    if (params.has('shareLocation')) {
-        getUserLocation(requestChatBot);
-    }
-    else {
-        requestChatBot();
-    }
-}
-
-function getUserLocation(callback) {
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            var latitude  = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            var location = {
-                lat: latitude,
-                long: longitude
-            }
-            callback(location);
-        },
-        function(error) {
-            // user declined to share location
-            console.log("location error:" + error.message);
-            callback();
-        });
-}
+//function chatRequested() {
+  //      requestChatBot();
+//}
 
 function initBotConversation() {
     if (this.status >= 400) {
