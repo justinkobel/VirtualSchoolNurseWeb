@@ -1,19 +1,9 @@
 <template>
-  <div>Hello {{ value }}</div>
+<div>
   <div id="webchat" role="main" watermark="false"></div>
   <script>chatRequested();</script>
+</div>
 </template>
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      value: "World"
-    };
-  }
-};
-</script>
 
 <script>
 
